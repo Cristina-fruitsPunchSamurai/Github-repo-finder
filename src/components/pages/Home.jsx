@@ -4,14 +4,14 @@ import Message from "../Message";
 import SearchBar from "../SearchBar";
 import ReposResult from "../ReposResults";
 
-function Home(){
+function Home({message, setSearch, repos, loading}){
 
     return(
         <>
         <HeaderLogo />
-        <Message />
-        <SearchBar />
-        <ReposResult />
+        <SearchBar setSearch={setSearch}/>
+        <Message message={message} />
+        <ReposResult repos={repos} loading={loading} />
         </>
     )
 }

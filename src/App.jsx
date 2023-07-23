@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import HeaderLogo from './components/HeaderLogo';
 import SearchBar from './components/SearchBar';
 import Message from './components/Message';
-import Faq from './components/Faq';
 import repos from '././data/repos.js'
 import ReposResult from './components/ReposResults';
+import Faq from './components/Faq';
+import Home from './components/pages/Home';
 import axios from 'axios';
 
 //ROUTER
@@ -49,14 +50,22 @@ useEffect(() => {
   return (
     <>
     <BrowserRouter>
-    <Routes>
-      <HeaderLogo />
       <NavBar />
-
+    <Routes>
+      <Route
+      path='/'
+      element={
+      <Home
+                message={message}
+                setSearch={setSearch}
+                repos={apiData}
+                loading={loading}/>
+                }>
+      </Route>
       <Route path='/faq' element={<Faq />}></Route>
-      <SearchBar setSearch={setSearch}/>
+      {/* <SearchBar setSearch={setSearch}/>
       <Message message={message}/>
-      <ReposResult repos={apiData} loading={loading}/>
+      <ReposResult repos={apiData} loading={loading}/> */}
     </Routes>
     </BrowserRouter>
     </>

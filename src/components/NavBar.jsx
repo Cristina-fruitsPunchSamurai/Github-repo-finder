@@ -30,11 +30,16 @@ function NavBar() {
                 GitHub Project
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff' }}>
-                    {item}
-                </Button>
-                ))}
+                <a href='/'>
+                    <Button  sx={{ color: '#fff' }}>
+                        Home
+                    </Button>
+                </a>
+                <a href='/faq'>
+                    <Button sx={{ color: '#fff' }}>
+                        FAQ
+                    </Button>
+                </a>
             </Box>
             </Toolbar>
         </AppBar>
