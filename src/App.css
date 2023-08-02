@@ -1,6 +1,4 @@
-body {
-  background-color: #929A9F;
-}
+
 
 .header-logo{
   width: 200px;
@@ -21,4 +19,8 @@ body {
     margin-right: auto;
     display: flex;
     justify-content: center;
+}
+
+.link-repo {
+  text-decoration: none;
 }

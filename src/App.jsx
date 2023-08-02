@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //CSS
 import './App.css';
 import NavBar from './components/NavBar';
+import RepoPage from './components/RepoPage';
 
 function App() {
 
@@ -62,6 +63,7 @@ useEffect(() => {
                 loading={loading}/>
                 }>
       </Route>
+      <Route path='/repo/:id' element={<RepoPage />}/>
       <Route path='/faq' element={<Faq />}></Route>
       {/* <SearchBar setSearch={setSearch}/>
       <Message message={message}/>

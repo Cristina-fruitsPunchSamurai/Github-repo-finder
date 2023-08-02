@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
     const navItems = ['Home', 'FAQ'];
@@ -30,16 +31,16 @@ function NavBar() {
                 GitHub Project
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                <a href='/'>
+                <NavLink to="/">
                     <Button  sx={{ color: '#fff' }}>
                         Home
                     </Button>
-                </a>
-                <a href='/faq'>
+                </NavLink>
+                <NavLink to='/faq'>
                     <Button sx={{ color: '#fff' }}>
                         FAQ
                     </Button>
-                </a>
+                </NavLink>
             </Box>
             </Toolbar>
         </AppBar>
