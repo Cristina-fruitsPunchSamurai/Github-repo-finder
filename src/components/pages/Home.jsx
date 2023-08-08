@@ -2,7 +2,7 @@
 import HeaderLogo from "../HeaderLogo";
 import Message from "../Message";
 import SearchBar from "../SearchBar";
-import ReposResult from "../ReposResults/";
+import ReposResult from "../ReposResults/Index";
 
 function Home({message, setSearch, repos, loading}){
 
