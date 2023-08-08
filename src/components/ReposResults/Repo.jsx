@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 
-
 function Repo ( {image, name, author, description, id} ) {
     return(
         //En mobile un bloc, il occupe les 12 columns en entier mais en medium il occupe 4fr des 12fr

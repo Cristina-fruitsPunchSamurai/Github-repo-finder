@@ -6,7 +6,6 @@ import Grid from '@mui/material/Grid';
 
 function ReposResult( {repos, loading} ){
 
-    //console.log(repos)
     return (
         <>
         { loading ? <RepoLoading/> :
