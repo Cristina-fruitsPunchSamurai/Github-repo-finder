@@ -1,9 +1,4 @@
 import { useEffect, useState } from 'react';
-import HeaderLogo from './components/HeaderLogo';
-import SearchBar from './components/SearchBar';
-import Message from './components/Message';
-import repos from '././data/repos.js'
-import ReposResult from './components/ReposResults';
 import Faq from './components/Faq';
 import Home from './components/pages/Home';
 import axios from 'axios';
