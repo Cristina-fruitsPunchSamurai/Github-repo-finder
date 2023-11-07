@@ -11,6 +11,7 @@ function SearchBar( {setSearch} ) {
     //console.log('SEARCH', search);
 
     const handleKeyDown = (e) => {
+        //console.log('KEYDOWN', e)
         if (e.code === 'Enter' && inputValue.length > 3) {
             setSearch(inputValue)
         }

@@ -15,7 +15,7 @@ function App() {
 
 //STATES
   const [search, setSearch] = useState('');
-  const [message, setMessage] = useState('Cherchez un repo');
+  const [message, setMessage] = useState('Cherchez un repo pour commencer');
   const [apiData, setApiData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -25,11 +25,12 @@ useEffect(() => {
     setLoading(true)
     try {
       //
-      const result = await axios.get(`https://api.github.com/search/repositories?q=${search}`);
-      //
-      console.log(result.data)
-      setApiData(result.data.items)
-      setMessage(`La recherche a donnée ${result.data.total_count} résultats`)
+      const {data} = await axios.get(`https://api.github.com/search/repositories?q=${search}`);
+
+      // console.log('data',data)
+      // console.log('items',data.items)
+      setApiData(data.items)
+      setMessage(`La recherche a donnée ${data.total_count} résultats`)
       setLoading(false);
 
     } catch(error) {

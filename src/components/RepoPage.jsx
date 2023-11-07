@@ -9,7 +9,6 @@ const RepoPage = () => {
     const [repo, setRepo] = useState();
 
     const {id} = useParams();
-    console.log(id)
 
 
     useEffect(()=> {
